@@ -10,7 +10,12 @@ import (
 	"github.com/joshcarp/gop"
 )
 
-func (s *Server)ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func ServeHTTP(w http.ResponseWriter, r *http.Request){
+	New().ServeHTTP(w, r)
+}
+
+
+func (s Server)ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	var err error
 	defer func() {
 		gop.HandleErr(w, err)
