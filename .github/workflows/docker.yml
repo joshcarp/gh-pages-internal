@@ -12,11 +12,10 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
-      - name: Push to GitHub Packages
-        uses: docker/build-push-action@v1
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
         with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GH_TOKEN }}
-          registry: containers.pkg.github.com
-          repository: joshcarp/gh-pages-internal
+          push: true
+          tags: joshcarp/gh-pages-internal:latest
           tag_with_ref: true
