@@ -18,5 +18,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_TOKEN }}
           registry: docker.pkg.github.com
-          repository: my-org/my-repo/my-image
+          repository: joshcarp/gh-pages-internal
           tag_with_ref: true
