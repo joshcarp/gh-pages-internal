@@ -21,6 +21,7 @@ func (s Server)ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		gop.HandleErr(w, err)
 	}()
 	pth := strings.TrimLeft(r.URL.Path, "/")
+	pth = strings.TrimLeft(pth, os.Getenv("BASE_PATH"))
 	pth = strings.TrimRight(pth, "/")
 	pth = path.Join(os.Getenv("BASE"), pth)
 	if r.Method == "DELETE"{
