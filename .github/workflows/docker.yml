@@ -16,7 +16,7 @@ jobs:
         uses: docker/build-push-action@v1
         with:
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.GH_TOKEN }}
           registry: docker.pkg.github.com
           repository: my-org/my-repo/my-image
           tag_with_ref: true
