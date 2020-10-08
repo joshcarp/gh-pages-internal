@@ -20,7 +20,6 @@ jobs:
       - name: Deploy
         run: |
           gcloud functions deploy docs \
-                 --source=pkg/pages/ \
                  --entry-point=ServeHTTP \
                  --runtime=go113 \
                  --trigger-http \
