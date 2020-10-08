@@ -33,7 +33,7 @@ func (s Server)ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		pth += "/index.html"
 	}
 	w.Header().Add("Content-Type", mime.TypeByExtension(path.Ext(pth)))
-	res, _, err := s.Retrieve(pth+"@HEAD")
+	res, _, err := s.Retrieve(pth)
 	if err != nil {
 		return
 	}
