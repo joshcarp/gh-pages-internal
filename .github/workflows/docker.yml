@@ -17,6 +17,6 @@ jobs:
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.GH_TOKEN }}
-          registry: docker.pkg.github.com
-          repository: joshcarp/gh-pages-internal/gh-pages-internal
+          registry: containers.pkg.github.com
+          repository: joshcarp/gh-pages-internal
           tag_with_ref: true
