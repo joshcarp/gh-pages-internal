@@ -21,3 +21,7 @@ Serve static files directly from git repos
  curl --location --request DELETE 'http://<host>/<resource>/'
 ```
 - This will delete from gcs cache so the next request of `resource` will be a fresh fetch from github
+## Example
+- deployed to google cloud functions, `BASE=github.com/joshcarp`, deployed at `https://us-central1-gopper.cloudfunctions.net/docs` pointing at [this README](https://us-central1-gopper.cloudfunctions.net/docs/gh-pages-internal/README.md)
+<img width="1078" alt="Screen Shot 2020-10-12 at 9 51 58 am" src="https://user-images.githubusercontent.com/32605850/95692323-bbb4f080-0c70-11eb-91b1-a644ea178b85.png">
+
